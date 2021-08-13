@@ -34,9 +34,6 @@ h4 {
     margin-left: .5%;
 }
 
-h2 {
-    color: gold;
-}
 
 #playerInput {
     margin-top: 3%;
@@ -65,4 +62,8 @@ button:hover {
 #paper {
     margin-left: 1%; 
     margin-right: 1%;
+}
+
+span {
+    font-weight: 1000;
 }

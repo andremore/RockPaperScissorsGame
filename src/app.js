@@ -17,40 +17,78 @@ const computerSelection = () => {
         default:
             return 'Error';
     }
-};
+}
 
 const computerContainer = document.querySelector('#computerInput')
 
 // Computer Input Result
+const computerText = document.createElement('h4')
 const computerOutcome = document.createElement('span')
-let computer = computerSelection()
-computerOutcome.innerText = computer
 
-computerContainer.append(computerOutcome)
+computerContainer.append(computerText, computerOutcome)
 
 // Player Inputs
-const rock = document.querySelector('#rock').addEventListener('click', playerRock)
-const paper = document.querySelector('#paper').addEventListener('click', playerPaper)
-const scissors = document.querySelector('#scissors').addEventListener('click', playerScissors)
+document.querySelector('#rock').addEventListener('click', playerRock)
+document.querySelector('#paper').addEventListener('click', playerPaper)
+document.querySelector('#scissors').addEventListener('click', playerScissors)
+
 
 function playerRock() {
-    console.log('rock')
+    winnerSelection('rock', computerSelection())
+    computerText.innerText = 'The computer played: '
 }
 function playerPaper() {
-    console.log('paper')
+    winnerSelection('paper', computerSelection())
+    computerText.innerText = 'The computer played: '
 }
 function playerScissors() {
-    console.log('scissors')
+    winnerSelection('scissors', computerSelection())
+    computerText.innerText = 'The computer played: '
 }
 
-// Game Result
-const container = document.querySelector('.container')
-// ! Call Game Function
-const outcome = document.querySelector('h2')
-//let winner = winnerSelection()
-outcome.innerText = `${outcome}`
+// Winner selection function
+let winnerSelection = (playerChoice, computerChoice) => {
+    const outcome = document.querySelector('h2')
+    computerChoice = computerChoice.toLowerCase();
+    playerChoice = playerChoice.toLowerCase();
 
-console.log(computer)
+    console.log(playerChoice, 'vs', computerChoice);
 
+    computerOutcome.innerText = computerChoice
 
+    if (playerChoice === computerChoice) {
+        outcome.innerText = 'It\'s a tie!'
+        outcome.style.color = 'rgb(255, 251, 43)'
+        return
+    }
 
+    if (playerChoice === 'rock') {
+        if (computerChoice === 'paper') {
+            outcome.innerText = 'The computer won!'
+            outcome.style.color = 'rgb(255, 43, 43)'
+        } else {
+            outcome.innerText = 'You won!'
+            outcome.style.color = 'rgb(110, 255, 43)'
+        }
+    }
+
+    if (playerChoice === 'paper') {
+        if (computerChoice === 'scissors') {
+            outcome.innerText = 'The computer won!'
+            outcome.style.color = 'rgb(255, 43, 43)'
+        } else {
+            outcome.innerText = 'You won!'
+            outcome.style.color = 'rgb(110, 255, 43)'
+        }
+    }
+
+    if (playerChoice === 'scissors') {
+        if (computerChoice === 'rock') {
+            outcome.innerText = 'The computer won!'
+            outcome.style.color = 'rgb(255, 43, 43)'
+        } else {
+            outcome.innerText = 'You won!'
+            outcome.style.color = 'rgb(110, 255, 43)'
+        }
+    }
+}
