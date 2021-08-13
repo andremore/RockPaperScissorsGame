@@ -1,6 +1,6 @@
 # RockPaperScissorsGame
 
-// I created this game as part of The Odin Project course
+I created this game as part of The Odin Project course
 
 It's a simple Rock, Paper, Scissors game
 
