@@ -62,6 +62,7 @@ let winnerSelection = (playerChoice, computerChoice) => {
     if (playerChoice === computerChoice) {
         outcome.innerText = 'It\'s a tie!'
         outcome.style.color = 'rgb(255, 251, 43)'
+        document.body.style.background = "rgb(2,29,33) linear-gradient(180deg, rgba(2,29,33,1) 0%, rgba(52,51,3,1) 100%) no-repeat right top"
         return
     }
 
@@ -69,9 +70,11 @@ let winnerSelection = (playerChoice, computerChoice) => {
         if (computerChoice === 'paper') {
             outcome.innerText = 'The computer won!'
             outcome.style.color = 'rgb(255, 43, 43)'
+            document.body.style.background = "rgb(2,29,33) linear-gradient(180deg, rgba(2,29,33,1) 0%, rgba(52,3,5,1) 100%) no-repeat right top"
         } else {
             outcome.innerText = 'You won!'
             outcome.style.color = 'rgb(110, 255, 43)'
+            document.body.style.background = "rgb(2,29,33) linear-gradient(180deg, rgba(2,29,33,1) 0%, rgba(3,52,7,1) 100%) no-repeat right top"
         }
     }
 
@@ -79,9 +82,12 @@ let winnerSelection = (playerChoice, computerChoice) => {
         if (computerChoice === 'scissors') {
             outcome.innerText = 'The computer won!'
             outcome.style.color = 'rgb(255, 43, 43)'
+            document.body.style.background = "rgb(2,29,33) linear-gradient(180deg, rgba(2,29,33,1) 0%, rgba(52,3,5,1) 100%) no-repeat right top"
+            
         } else {
             outcome.innerText = 'You won!'
             outcome.style.color = 'rgb(110, 255, 43)'
+            document.body.style.background = "rgb(2,29,33) linear-gradient(180deg, rgba(2,29,33,1) 0%, rgba(3,52,7,1) 100%) no-repeat right top"
         }
     }
 
@@ -89,9 +95,11 @@ let winnerSelection = (playerChoice, computerChoice) => {
         if (computerChoice === 'rock') {
             outcome.innerText = 'The computer won!'
             outcome.style.color = 'rgb(255, 43, 43)'
+            document.body.style.background = "rgb(2,29,33) linear-gradient(180deg, rgba(2,29,33,1) 0%, rgba(52,3,5,1) 100%) no-repeat right top"
         } else {
             outcome.innerText = 'You won!'
             outcome.style.color = 'rgb(110, 255, 43)'
+            document.body.style.background = "rgb(2,29,33) linear-gradient(180deg, rgba(2,29,33,1) 0%, rgba(3,52,7,1) 100%) no-repeat right top"
         }
     }
 }
