@@ -1,6 +1,6 @@
 # RockPaperScissorsGame
 
-// I created this game as part of The Odin Project course
+I created this game as part of The Odin Project course
 
 It's a simple Rock, Paper, Scissors game
 
@@ -24,7 +24,7 @@ I used pure HTML & CSS since it's a simple page that doesn't need much styling
 
 For the game to run I used JavaScript which is what this project is all about
 
-# Suggestions
+# Suggestions & Feedback
 
 Suggestions are always welcome, if you have any please message me or push it here
 
