@@ -19,9 +19,10 @@ const computerSelection = () => {
     }
 }
 
+// Selecting the <div> that will contain the computer input
 const computerContainer = document.querySelector('#computerInput')
 
-// Computer Input Result
+// Computer input result
 const computerText = document.createElement('h4')
 const computerOutcome = document.createElement('span')
 
@@ -32,29 +33,31 @@ document.querySelector('#rock').addEventListener('click', playerRock)
 document.querySelector('#paper').addEventListener('click', playerPaper)
 document.querySelector('#scissors').addEventListener('click', playerScissors)
 
-
+// Functions that assign a value to each button and runs the game
 function playerRock() {
     winnerSelection('rock', computerSelection())
     computerText.innerText = 'The computer played: '
 }
+
 function playerPaper() {
     winnerSelection('paper', computerSelection())
     computerText.innerText = 'The computer played: '
 }
+
 function playerScissors() {
     winnerSelection('scissors', computerSelection())
     computerText.innerText = 'The computer played: '
 }
 
-// Winner selection function
+// All possible plays and each result depending on the player & computer inputs
 let winnerSelection = (playerChoice, computerChoice) => {
     const outcome = document.querySelector('h2')
     computerChoice = computerChoice.toLowerCase();
     playerChoice = playerChoice.toLowerCase();
-
-    console.log(playerChoice, 'vs', computerChoice);
-
     computerOutcome.innerText = computerChoice
+
+    // Debugging
+    console.log(playerChoice, 'vs', computerChoice);
 
     if (playerChoice === computerChoice) {
         outcome.innerText = 'It\'s a tie!'
